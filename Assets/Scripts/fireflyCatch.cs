@@ -5,11 +5,17 @@ using UnityEngine;
 public class fireflyCatch : MonoBehaviour
 {
    public GameObject jar;
-   public Transform firefly;
+   public GameObject movementScript;
+
+   public GameObject firefly;
+   public Transform fireflyT;
 
     void Start()
     {
-       firefly = this.transform;
+       fireflyT = this.transform;
+       firefly = this.gameObject;
+
+       //movementScript = GetComponent(fireflyMovement);
     }
 
     void OnTriggerStay(Collider other){
@@ -18,10 +24,14 @@ public class fireflyCatch : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.E)){
             
-            firefly.transform.position = jar.transform.position;
+            fireflyT.transform.position = jar.transform.position;
 
             transform.GetComponent<SphereCollider>().enabled = false;
             transform.GetComponent<Rigidbody>().isKinematic = false;
+            transform.GetComponent<Rigidbody>().useGravity = true;
+
+            //disable firefly movement
+            //movementScript.enabled = false;
 
         }
       }   
