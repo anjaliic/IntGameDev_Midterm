@@ -112,6 +112,88 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &70049218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70049219}
+  - component: {fileID: 70049221}
+  - component: {fileID: 70049220}
+  m_Layer: 9
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &70049219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70049218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1570682753}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &70049220
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70049218}
+  m_Enabled: 1
+--- !u!20 &70049221
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70049218}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_GateFitMode: 2
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &92652174
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +281,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &92652178
 MonoBehaviour:
@@ -423,7 +505,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &213970137
 MonoBehaviour:
@@ -619,7 +701,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &287119657
 MonoBehaviour:
@@ -924,7 +1006,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &487550558
 MonoBehaviour:
@@ -1309,7 +1391,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &575850291
 MonoBehaviour:
@@ -1505,7 +1587,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &693859398
 MonoBehaviour:
@@ -2056,7 +2138,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &831407895
 MonoBehaviour:
@@ -2252,7 +2334,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &831637642
 MonoBehaviour:
@@ -2460,7 +2542,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &927836787
 MonoBehaviour:
@@ -2656,7 +2738,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &969084446
 MonoBehaviour:
@@ -2852,7 +2934,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &982961239
 MonoBehaviour:
@@ -3167,7 +3249,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1168098051
 MonoBehaviour:
@@ -3363,7 +3445,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1168520771
 MonoBehaviour:
@@ -3559,7 +3641,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1183980464
 MonoBehaviour:
@@ -3755,7 +3837,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1189010080
 MonoBehaviour:
@@ -3951,7 +4033,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1203555819
 MonoBehaviour:
@@ -4577,7 +4659,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1325302280
 MonoBehaviour:
@@ -4773,7 +4855,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1343592076
 MonoBehaviour:
@@ -4936,7 +5018,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 84
+  m_Constraints: 80
   m_CollisionDetection: 1
 --- !u!136 &1346364625
 CapsuleCollider:
@@ -5010,7 +5092,6 @@ Transform:
   m_Children:
   - {fileID: 469719806}
   - {fileID: 527804385}
-  - {fileID: 904379870}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5101,7 +5182,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1348102071
 MonoBehaviour:
@@ -5404,7 +5485,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1386207146
 MonoBehaviour:
@@ -5600,7 +5681,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1493417583
 MonoBehaviour:
@@ -5714,7 +5795,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1346364628}
+    m_TransformParent: {fileID: 1570682753}
     m_Modifications:
     - target: {fileID: 100004, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
       propertyPath: m_Name
@@ -5738,15 +5819,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.88
+      value: -0.54314506
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07923012
+      value: 2.3799996
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9200001
+      value: -24.460999
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5766,7 +5847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5782,11 +5863,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39452237
+      value: 0.43923745
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3031375
+      value: 0.3099856
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
       propertyPath: m_LocalScale.z
@@ -5830,6 +5911,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68bca90e28c09b94985aecb9b6a367ba, type: 3}
+--- !u!1 &1570682752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1570682753}
+  m_Layer: 0
+  m_Name: jar cam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1570682753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570682752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.33685493, y: 1.4900002, z: 17.841}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 70049219}
+  - {fileID: 904379870}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1614439549
 GameObject:
   m_ObjectHideFlags: 0
@@ -5917,7 +6030,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1614439553
 MonoBehaviour:
@@ -6220,7 +6333,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1635904253
 MonoBehaviour:
@@ -6416,7 +6529,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1650029216
 MonoBehaviour:
@@ -6612,7 +6725,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1656797243
 MonoBehaviour:
@@ -6881,18 +6994,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.83893
       objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 31efac62b34974944869c043961a9312, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 81.10116
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 31efac62b34974944869c043961a9312, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 31efac62b34974944869c043961a9312, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: 31efac62b34974944869c043961a9312, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
@@ -6909,6 +7010,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[3]
       value: 
       objectReference: {fileID: 2100000, guid: 5ae8aa78e57e4b047b473df03d2731ce, type: 2}
+    - target: {fileID: 400008, guid: 31efac62b34974944869c043961a9312, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 81.10116
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 31efac62b34974944869c043961a9312, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 31efac62b34974944869c043961a9312, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31efac62b34974944869c043961a9312, type: 3}
 --- !u!1001 &1684730521
@@ -7105,7 +7218,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1731880132
 MonoBehaviour:
@@ -7657,7 +7770,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2097278135
 MonoBehaviour:
@@ -7891,7 +8004,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2098750485
 MonoBehaviour:
@@ -8087,7 +8200,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2127196206
 MonoBehaviour:
