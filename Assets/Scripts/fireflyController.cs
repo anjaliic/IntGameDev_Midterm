@@ -2,9 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fireflyMovement : MonoBehaviour
+public class fireflyController : MonoBehaviour
 {
-     public float maxVelocity;
+     public GameObject jar;
+
+     public GameObject firefly;
+     public Transform fireflyT;
+
+     public bool lid = true;
+     public bool caught = false;
+
+    // - - - movement 
+
+     public float maxVelocity = .1f;
      
      public float xMin = -15;
      public float xMax = 15;
@@ -26,27 +36,35 @@ public class fireflyMovement : MonoBehaviour
      private float time;
      private float angle;
      private float dir;
- 
-     // Use this for initialization
-     void Start () {
-         x = Random.Range(-maxVelocity, maxVelocity);
-         z = Random.Range(-maxVelocity, maxVelocity);
-         y = Random.Range(-maxVelocity, maxVelocity);
 
-         startX = Random.Range(xMin, xMax);
-         startY = Random.Range(yMin, yMax);
-         startZ = Random.Range(zMin, zMax);
+    // Start is called before the first frame update
+    void Start()
+    {
+       jar = GameObject.Find("jar");
 
-         //transform.position = new Vector3(startX, startY, startZ);
+       fireflyT = this.transform;
+       firefly = this.gameObject;
+
+       //- - - movement
+
+        x = Random.Range(-maxVelocity, maxVelocity);
+        z = Random.Range(-maxVelocity, maxVelocity);
+        y = Random.Range(-maxVelocity, maxVelocity);
+
+        startX = Random.Range(xMin, xMax);
+        startY = Random.Range(yMin, yMax);
+        startZ = Random.Range(zMin, zMax);
+
+        //transform.position = new Vector3(startX, startY, startZ);
         
-         dir = Random.value > 0.5f ? 1f : -1f;
-         angle = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
-         transform.localRotation = Quaternion.Euler( 0, angle, 0);
-     }
-     
-     // Update is called once per frame
-     void Update () {
- 
+        dir = Random.value > 0.5f ? 1f : -1f;
+        angle = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
+        transform.localRotation = Quaternion.Euler( 0, angle, 0);
+    }
+
+    // Update is called once per frame
+    void Update(){
+
          time += Time.deltaTime;
  
          if (transform.localPosition.x > xMax) {
@@ -92,20 +110,28 @@ public class fireflyMovement : MonoBehaviour
          }
          transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y + y, transform.localPosition.z + z);
     }
-
-        void OnTriggerStay(Collider other){
+      void OnTriggerStay(Collider other){
     
         if(other.gameObject.name == "player"){
 
         if(Input.GetKeyDown(KeyCode.E)){
 
-            //caught = true;
-            
-            //fireflyT.transform.position = jar.transform.position;
+            this.caught = true;
 
-            transform.GetComponent<SphereCollider>().enabled = false;
-            transform.GetComponent<Rigidbody>().isKinematic = false;
-            transform.GetComponent<Rigidbody>().useGravity = true;
+            this.fireflyT.transform.position = jar.transform.position;
+
+            this.zMax = -13.4f;
+            this.zMin = -13.8f;
+
+            this.yMin = -1.19f;
+            this.yMax = -.7f;
+
+            this.xMin =  -49.3f;
+            this.xMax = -48.9f;
+
+            //transform.GetComponent<SphereCollider>().enabled = false;
+            //transform.GetComponent<Rigidbody>().isKinematic = false;
+            //transform.GetComponent<Rigidbody>().useGravity = true;
 
             //disable firefly movement
             //movementScript.enabled = false;

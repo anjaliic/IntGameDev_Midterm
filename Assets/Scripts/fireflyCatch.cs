@@ -10,8 +10,13 @@ public class fireflyCatch : MonoBehaviour
    public GameObject firefly;
    public Transform fireflyT;
 
+   public bool lid = true;
+   public bool caught = false;
+
     void Start()
     {
+       jar = GameObject.Find("jar");
+
        fireflyT = this.transform;
        firefly = this.gameObject;
 
@@ -23,6 +28,8 @@ public class fireflyCatch : MonoBehaviour
         if(other.gameObject.name == "player"){
 
         if(Input.GetKeyDown(KeyCode.E)){
+
+            caught = true;
             
             fireflyT.transform.position = jar.transform.position;
 

@@ -1,46 +1,26 @@
 fileFormatVersion: 2
-guid: 68bca90e28c09b94985aecb9b6a367ba
+guid: 95150b7d407a9e048ab32ac2b4a9bbbb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cylinder
-    100004: //RootNode
+    100000: //RootNode
+    100002: Camera
+    100004: Icosphere.001
     100006: Light
-    100008: Cylinder.002
-    100010: Cylinder.003
-    100012: body
-    100014: lid
-    400000: Camera
-    400002: Cylinder
-    400004: //RootNode
+    100008: Sphere.003
+    400000: //RootNode
+    400002: Camera
+    400004: Icosphere.001
     400006: Light
-    400008: Cylinder.002
-    400010: Cylinder.003
-    400012: body
-    400014: lid
+    400008: Sphere.003
     2000000: Camera
     2100000: No Name
-    2300000: Cylinder
-    2300002: Cylinder.002
-    2300004: Cylinder.003
-    2300006: body
-    2300008: lid
-    3300000: Cylinder
-    3300002: Cylinder.002
-    3300004: Cylinder.003
-    3300006: body
-    3300008: lid
-    4300000: Cylinder
-    4300002: Cylinder.002
-    4300004: Cylinder.003
-    4300006: body
-    4300008: lid
-    6400000: Cylinder
-    6400002: Cylinder.002
-    6400004: Cylinder.003
-    6400006: body
-    6400008: lid
+    2300000: Icosphere.001
+    2300002: Sphere.003
+    3300000: Icosphere.001
+    3300002: Sphere.003
+    4300000: Sphere.003
+    4300002: Icosphere.001
     10800000: Light
   externalObjects: {}
   materials:
