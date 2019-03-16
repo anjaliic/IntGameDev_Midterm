@@ -22,7 +22,6 @@ public class fireflySpawner : MonoBehaviour
              z = Random.Range(-11f, 47f); 
 
             Instantiate(firefly, new Vector3(x, y, z), Quaternion.identity);
-            Debug.Log("instantiated 1 firefly");
         }
     }
 
