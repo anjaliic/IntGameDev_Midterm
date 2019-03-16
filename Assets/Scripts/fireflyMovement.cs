@@ -37,7 +37,7 @@ public class fireflyMovement : MonoBehaviour
          startY = Random.Range(yMin, yMax);
          startZ = Random.Range(zMin, zMax);
 
-         //transform.position = new Vector3(startX, startY, startZ);
+         transform.position = new Vector3(startX, startY, startZ);
         
          dir = Random.value > 0.5f ? 1f : -1f;
          angle = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
@@ -74,7 +74,7 @@ public class fireflyMovement : MonoBehaviour
              time = 0.0f; 
          }
 
-         if(transform.position.y > yMax){
+        if(transform.position.y > yMax){
              dir = -1f;
          }
          if(transform.position.y < yMin){
@@ -90,7 +90,7 @@ public class fireflyMovement : MonoBehaviour
              transform.localRotation = Quaternion.Euler(0, angle, 0);
              time = 0.0f;
          }
-         transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y + y, transform.localPosition.z + z);
+         transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y, transform.localPosition.z + z);
     }
 
         void OnTriggerStay(Collider other){
