@@ -55,7 +55,7 @@ public class fireflyController : MonoBehaviour
 
     void OnCollisionEnter(Collision col){
 
-        if(col.tag == "wall"){
+        if(col.gameObject.tag == "wall"){
             movement *= -1;
         }
 
