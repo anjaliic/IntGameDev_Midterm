@@ -16,14 +16,14 @@ public class fireflyController : MonoBehaviour
 
      public float maxVelocity = .1f;
      
-     public float xMin = -15;
-     public float xMax = 15;
+     public float xMin = -50f;
+     public float xMax = -48f;
 
-     public float yMin = 0;
-     public float yMax = 5;
+     public float yMin = -3f;
+     public float yMax = 1.2f;
 
-     public float zMin = -9;
-     public float zMax = 35;
+     public float zMin = -14.8f;
+     public float zMax = -12.3f;
   
      private float x;
      private float y;
@@ -55,7 +55,7 @@ public class fireflyController : MonoBehaviour
         startY = Random.Range(yMin, yMax);
         startZ = Random.Range(zMin, zMax);
 
-        //transform.position = new Vector3(startX, startY, startZ);
+        transform.position = new Vector3(startX, startY, startZ);
         
         dir = Random.value > 0.5f ? 1f : -1f;
         angle = Mathf.Atan2(x, z) * (180 / 3.141592f) + 90;
@@ -108,7 +108,7 @@ public class fireflyController : MonoBehaviour
              transform.localRotation = Quaternion.Euler(0, angle, 0);
              time = 0.0f;
          }
-         transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y + y, transform.localPosition.z + z);
+         //transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y + y, transform.localPosition.z + z);
     }
       void OnTriggerStay(Collider other){
     
@@ -129,8 +129,9 @@ public class fireflyController : MonoBehaviour
             this.xMin =  -49.3f;
             this.xMax = -48.9f;
 
-            //transform.GetComponent<SphereCollider>().enabled = false;
-            //transform.GetComponent<Rigidbody>().isKinematic = false;
+            transform.GetComponent<SphereCollider>().enabled = false;
+            //transform.GetComponent<Rigidbody3D>().enabled = false;
+            transform.GetComponent<BoxCollider>().enabled = false;
             //transform.GetComponent<Rigidbody>().useGravity = true;
 
             //disable firefly movement
