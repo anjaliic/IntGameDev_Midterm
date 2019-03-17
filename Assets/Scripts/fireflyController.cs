@@ -9,10 +9,14 @@ public class fireflyController : MonoBehaviour
      public GameObject firefly;
      public Transform fireflyT;
 
-     public bool lid = true;
+     public GameObject lid;
+     public GameObject lidColl;
+
+     public bool lidOn = true;
      public bool caught = false;
 
-     public float speed = 1f;
+     private float speed = 5f;
+
      Vector3 movement;
 
      private float x;
@@ -50,7 +54,6 @@ public class fireflyController : MonoBehaviour
 
         transform.Translate(movement * Time.deltaTime);
          
-
     }
 
     void OnCollisionEnter(Collision col){
@@ -73,7 +76,7 @@ public class fireflyController : MonoBehaviour
 
             transform.GetComponent<SphereCollider>().enabled = false;
             //transform.GetComponent<Rigidbody3D>().enabled = false;
-            transform.GetComponent<BoxCollider>().enabled = false;
+            //transform.GetComponent<BoxCollider>().enabled = false;
             //transform.GetComponent<Rigidbody>().useGravity = true;
 
         }
