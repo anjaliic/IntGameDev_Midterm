@@ -35,6 +35,7 @@ public class fireflyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
        jar = GameObject.Find("jar");
 
        fireflyT = this.transform;
@@ -53,6 +54,10 @@ public class fireflyController : MonoBehaviour
     void Update(){
 
         transform.Translate(movement * Time.deltaTime);
+
+        if(Input.GetKeyDown("left shift") || Input.GetKeyDown("right shift")){
+
+        }
          
     }
 
@@ -72,6 +77,8 @@ public class fireflyController : MonoBehaviour
 
             this.caught = true;
 
+            GameManager.instance.score ++;
+            
             this.fireflyT.transform.position = jar.transform.position;
 
             transform.GetComponent<SphereCollider>().enabled = false;
@@ -80,6 +87,12 @@ public class fireflyController : MonoBehaviour
             //transform.GetComponent<Rigidbody>().useGravity = true;
 
         }
+      }
+
+      if(other.gameObject.name == "end"){
+
+          GameManager.instance.endOpt = true;
+
       }   
 
     }

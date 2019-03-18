@@ -1,31 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager gameMng;
 
-    //borders of firefly flight / game borders
+    public static GameManager instance = null;
 
-    public static float xMin = -35f;
-    public static float xMax = 31f;
+    public int score = 0;
 
-    public static float yMin = -2.5f;
-    public static float yMax = 4;
+    public bool movement = false;
+    public bool 
+    public bool endOpt = false;
+    public bool endGame = false;
 
-    public static float zMin = -11f;
-    public static float zMax = 47f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Awake(){
+        if(instance == null){
+            instance = this;
+        }
+        else if(instance != null){
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        if(endGame == true){
+
+        }
     }
+
 }

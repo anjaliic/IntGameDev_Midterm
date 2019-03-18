@@ -23,6 +23,7 @@ public class fpsController : MonoBehaviour
 
     void Update()
     {
+        if(GameManager.instance.movement == true){
         mouseX = Input.GetAxis("Mouse X");
         transform.Rotate(0, mouseX, 0);
         
@@ -33,11 +34,24 @@ public class fpsController : MonoBehaviour
         fpStrafe = Input.GetAxis("Horizontal");
 
         inputVelocity = transform.forward * fpForwardBackward;
-        inputVelocity += transform.right * fpStrafe;                                           
+        inputVelocity += transform.right * fpStrafe;   
+        }                                        
     }
 
     void FixedUpdate()
     {
         thisRigidbody.velocity = (inputVelocity * velocityModifier + Physics.gravity * .69f);
+    }
+
+    void OnTriggerStay(Collider col){
+        
+      if(col.gameObject.name == "endCol"){
+
+          GameManager.instance.endOpt = true;
+
+      } else{
+          GameManager.instance.endOpt = false;
+      }
+
     }
 }

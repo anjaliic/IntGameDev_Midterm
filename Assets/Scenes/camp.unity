@@ -112,6 +112,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8822514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8822515}
+  - component: {fileID: 8822516}
+  m_Layer: 0
+  m_Name: endCol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8822515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8822514}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.45, y: -1.75, z: 3.46}
+  m_LocalScale: {x: 1.3797734, y: 1.2850549, z: 3.0731518}
+  m_Children: []
+  m_Father: {fileID: 1109491395}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8822516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8822514}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &16031720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,7 +2049,9 @@ MonoBehaviour:
   jar: {fileID: 0}
   firefly: {fileID: 0}
   fireflyT: {fileID: 0}
-  lid: 1
+  lid: {fileID: 0}
+  lidColl: {fileID: 0}
+  lidOn: 1
   caught: 0
   xMin: -15
   xMax: 15
@@ -4037,6 +4083,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 094ea2df6d6fb5f4fbd376585bc80dc9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78010f371b869474683a7a5162ff9b78, type: 3}
+--- !u!4 &1109491395 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400010, guid: fdedf14803711db4abc552ace9b72935,
+    type: 3}
+  m_PrefabInstance: {fileID: 1669428101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1159180580
 GameObject:
   m_ObjectHideFlags: 0
@@ -5876,9 +5928,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346364622}
   serializedVersion: 2
-  m_Mass: 6
+  m_Mass: 60
   m_Drag: 0
-  m_AngularDrag: 0.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -5950,15 +6002,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346364622}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.78, z: -7.54}
+  m_LocalRotation: {x: -0, y: -0.009087956, z: -0, w: 0.9999587}
+  m_LocalPosition: {x: 16.57, y: 1.62, z: -5.49}
   m_LocalScale: {x: 1, y: 1.1359305, z: 1}
   m_Children:
   - {fileID: 469719806}
   - {fileID: 527804385}
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -1.041, z: 0}
 --- !u!1 &1348102067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6171,7 +6223,7 @@ GameObject:
   - component: {fileID: 1361295821}
   - component: {fileID: 1361295820}
   m_Layer: 0
-  m_Name: Text (1)
+  m_Name: instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6453,7 +6505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1436674904
 Transform:
   m_ObjectHideFlags: 0
@@ -6778,6 +6830,7 @@ MonoBehaviour:
   img1: {fileID: 1595028979}
   img2: {fileID: 57422984}
   myText: {fileID: 1159180582}
+  instruc: {fileID: 1361295820}
 --- !u!1 &1493417579
 GameObject:
   m_ObjectHideFlags: 0
@@ -7148,6 +7201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6d9e28de921aa48991c16efdfac477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  movement: 0
+  endOpt: 0
 --- !u!4 &1547355255
 Transform:
   m_ObjectHideFlags: 0
@@ -8331,6 +8387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: fdedf14803711db4abc552ace9b72935, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fdedf14803711db4abc552ace9b72935, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8407,10 +8467,42 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 5ae8aa78e57e4b047b473df03d2731ce, type: 2}
+    - target: {fileID: 6400002, guid: fdedf14803711db4abc552ace9b72935, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400002, guid: fdedf14803711db4abc552ace9b72935, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400004, guid: fdedf14803711db4abc552ace9b72935, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400004, guid: fdedf14803711db4abc552ace9b72935, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400008, guid: fdedf14803711db4abc552ace9b72935, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400008, guid: fdedf14803711db4abc552ace9b72935, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2300006, guid: fdedf14803711db4abc552ace9b72935, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 59e8c10f8f8d05442888374c71219c4c, type: 2}
+    - target: {fileID: 6400006, guid: fdedf14803711db4abc552ace9b72935, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400006, guid: fdedf14803711db4abc552ace9b72935, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdedf14803711db4abc552ace9b72935, type: 3}
 --- !u!1001 &1678029021
@@ -10081,7 +10173,9 @@ MonoBehaviour:
   jar: {fileID: 904379869}
   firefly: {fileID: 0}
   fireflyT: {fileID: 0}
-  lid: 1
+  lid: {fileID: 0}
+  lidColl: {fileID: 0}
+  lidOn: 1
   caught: 0
   xMin: -15
   xMax: 15

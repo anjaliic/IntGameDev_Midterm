@@ -9,6 +9,7 @@ public class dialogueController : MonoBehaviour
     public Image img2;
     
     public Text myText;
+    public Text instruc;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,26 @@ public class dialogueController : MonoBehaviour
             img1.enabled = false;
             img2.enabled = false;
             myText.text = "";
+            instruc.text = "";
+            GameManager.instance.movement = true;
+        }
+
+        if(GameManager.instance.movement == true){
+
+        if(GameManager.instance.endOpt == true){
+            img1.enabled = true;
+            img2.enabled = true;
+            myText.text = "Ready to head back inside?";
+            instruc.text = "Press SPACE to end";
+        }else if(GameManager.instance.endOpt != true){
+
+            img1.enabled = false;
+            img2.enabled = false;
+            myText.text = "";
+            instruc.text = "";
+
+        }
+
         }
     }
 
