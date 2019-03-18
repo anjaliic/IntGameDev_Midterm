@@ -8,11 +8,7 @@ public class fireflyController : MonoBehaviour
 
      public GameObject firefly;
      public Transform fireflyT;
-
-     public GameObject lid;
-     public GameObject lidColl;
-
-     public bool lidOn = true;
+     
      public bool caught = false;
 
      private float speed = 5f;
@@ -87,12 +83,6 @@ public class fireflyController : MonoBehaviour
             //transform.GetComponent<Rigidbody>().useGravity = true;
 
         }
-      }
-
-      if(other.gameObject.name == "end"){
-
-          GameManager.instance.endOpt = true;
-
       }   
 
     }
